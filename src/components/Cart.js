@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { useSnackbar } from "notistack";
+import {Button} from "@mui/material"
 import "./Cart.css";
 const Cart = ({ fetchedCartItems, setFetchedCartItems, totalItemsInCart}) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -85,7 +86,7 @@ const Cart = ({ fetchedCartItems, setFetchedCartItems, totalItemsInCart}) => {
               <button onClick={() => handleIncreaseQuantity(item.product.id)}>+</button>
             </div>
             <p>Total: ${calculateTotalPrice(item)}</p>
-            <button onClick={() => handleRemoveItem(item.product.id)}>Remove</button>
+            <Button variant="contained" onClick={() => handleRemoveItem(item.product.id)}>Remove</Button>
           </div>
         </div>
       )))}
