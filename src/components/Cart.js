@@ -43,10 +43,10 @@ const Cart = ({ fetchedCartItems, setFetchedCartItems, totalItemsInCart}) => {
   const handleDecreaseQuantity = (productId) => {
     const updatedCartItems = fetchedCartItems.map((item) => {
       if (item.product.id === productId) {
-        const updatedQty = Math.max(item.qty - 1, 1); // Ensure quantity doesn't go below 1
-        if (updatedQty === 1) {
-          // Quantity becomes less than 1, show a snackbar and remove the item
-          const message = `Quantity cannot be less than 1. The item "${item.product.name}" has been removed from the cart.`;
+        const updatedQty = Math.max(item.qty - 1, 0); // Ensure quantity doesn't go below 0
+        if (updatedQty === 0) {
+          // Quantity becomes 0, show a snackbar and remove the item
+          const message = `The item "${item.product.name}" has been removed from the cart.`;
           enqueueSnackbar(message, { variant: "warning" });
           return null; // Return null to remove the item from the cart
         }
@@ -55,11 +55,11 @@ const Cart = ({ fetchedCartItems, setFetchedCartItems, totalItemsInCart}) => {
       return item;
     });
   
-    // Remove null values from the updated cart items (i.e., remove the items with quantity less than 1)
+    // Remove null values from the updated cart items (i.e., remove the items with quantity 0)
     const updatedCartItemsWithoutNull = updatedCartItems.filter((item) => item !== null);
     setFetchedCartItems(updatedCartItemsWithoutNull);
   };
-
+  
   
   
 

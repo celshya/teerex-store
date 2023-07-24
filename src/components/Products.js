@@ -40,7 +40,8 @@ const Products =({ fetchedCartItems, setFetchedCartItems, totalItemsInCart }) =>
           return res.data;
         }catch(err){
           setIsLoading(false);
-          enqueueSnackbar(err.response.data.message, { variant: "error" });
+
+          enqueueSnackbar(`${err.response.statusText}, Invalid API call`, { variant: "error" });
         }
       };
 
@@ -191,7 +192,7 @@ const Products =({ fetchedCartItems, setFetchedCartItems, totalItemsInCart }) =>
                         <Button><CircularProgress sx={{ color: "#00a278" }} /></Button>
                         Loading Products...
                       </Stack>
-                    ) : filteredProducts.length === 0 ? (
+                    ) :(!filteredProducts) || ( filteredProducts.length) === 0 ? (
                       <Stack sx={{ minHeight: 500 }} justifyContent="center">
                         <Button><SentimentDissatisfied style={{ color: "#808080" }} /></Button>
                         <p style={{ color: "#808080" }}>No products found</p>

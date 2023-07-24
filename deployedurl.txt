@@ -1,1 +1,3 @@
 https://master--helpful-syrniki-8f9a53.netlify.app/
+
+1st Review: The UI code is modularised and have adequate components. The UI is not mobile responsive 1. No test cases are written for the project. 2. Error handling is not implemented. For instance if the api fails to respond and gives an error status code then no error message is shown to the user. 3. Decreasing the quantity of the product from 2 to 1 removes the product from the cart. Ideally the quantity should be decreased from 2 to 1 and not from 2 to 0.
