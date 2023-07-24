@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .header-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-title-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .explore-button {
+    margin-right: 10px;
+  }
+  
+  .cart-button {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart-button img {
+    width: 18px; 
+    height: 18px;
+    margin-right: 5px;
+  }
+  
+  .cart-button-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+  

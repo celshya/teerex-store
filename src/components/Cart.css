@@ -1,0 +1,84 @@
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .mini-image img {
+    width: 80px; /* Increase image size */
+    height: 80px; /* Increase image size */
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .cart-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Center align text */
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+  .quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  .overall-total {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    font-size: 18px;
+    font-weight: bold;
+  }
+  @media (max-width: 767px) {
+    .cart-item {
+      /* Adjust styles for cart items on mobile */
+      /* For example: */
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .cart-details {
+      /* Adjust styles for cart details on mobile */
+      /* For example: */
+      font-size: 14px;
+    }
+  
+    /* Add more styles as needed for other elements */
+  }
+ 
